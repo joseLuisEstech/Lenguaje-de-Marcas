@@ -58,6 +58,7 @@ h3{
 .nav-cv{
     background-color: var(--colorPrincipal);
 }
+
 .navegacion-principal{
     display: flex;
     align-items: center;
