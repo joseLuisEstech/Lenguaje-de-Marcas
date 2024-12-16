@@ -159,12 +159,19 @@ h3{
 
 
 /* --- SECCION SOBRE MÍ ---*/
-.sobre-mi{
-    display: flex;
-    justify-content: center;
+@media (min-width: 768px){
+    .sobre-mi{
+        display: flex;
+        justify-content: center;
+    }
 }
 .img-sobre-mi img{
-    width: 70rem;
+    width: 40rem;
+}
+@media (min-width: 768px){
+    .img-sobre-mi img{
+        width: 70rem;
+    }
 }
 .nombre-sobre-mi h3{
     margin-left: 5rem;
@@ -202,13 +209,15 @@ h3{
 }
 
 /* --- SEPARADOR ---*/
-.separador{
-    margin-top: 10rem;
-    display: flex;
-    align-items: center;
+@media (min-width: 768px){
+    .separador{
+        margin-top: 10rem;
+        display: flex;
+        align-items: center;
+    }
 }
 .imagen{
-    width: 50%;
+    width: 100%;
 }
 .imagen img{
     width:100%;
@@ -221,15 +230,25 @@ h3{
     color: var(--colorTitulos);
     font-weight: 700;
     font-size: 4.4rem;
-    width: 100rem;
+    width: 50rem;
     margin-bottom: 10rem;
+}
+@media (min-width: 768px){
+    .texto h2{
+        width: 100rem;
+    }
 }
 .texto p{
     color: var(--colorParrafos);
-    width: 80rem;
+    width: 40rem;
     font-size: 2.2rem;
     line-height: 2;
     letter-spacing: 1.5;
+}
+@media (min-width: 768px){
+    .texto p{
+        width: 80rem;
+    }
 }
 .enlace-cv{
     display: flex;
@@ -263,16 +282,20 @@ h3{
     color: var(--colorTitulos);
     text-transform: uppercase;
 }
-.tarjetas{
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+@media (min-width: 768px){
+    .tarjetas{
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
 }
+
 .proyectos .card:nth-child(3){
     grid-column: 1/3;
 }
 .card{
+    margin-bottom: 2rem;
     background-color: var(--naranja);
     border-radius: 2rem;
     display: flex;
@@ -283,8 +306,10 @@ h3{
 .card:hover{
     transform: scale(1.1);
 }
-.card:nth-child(3){
-    flex-direction: row;
+@media (min-width: 768px){
+    .card:nth-child(3){
+        flex-direction: row;
+    }
 }
 .card h3{
     color: var(--colorParrafos);
@@ -333,7 +358,8 @@ h3{
 /*CURRICULUM*/
 
 .curriculum h2{
-    color: var(--colorTitulos);
+    color: var(--naranja);
+    text-transform: uppercase;
 }
 .curriculum h3{
     color: var(--colorTitulos);
@@ -354,12 +380,79 @@ h3{
 .curriculum p span{
     font-weight: 700;
 }
-.experiencia{
-}
 .experiencia ul li{
     color: var(--blanco);
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
+}
+
+/*----------------------------------------------------*/
+/*CONTACTO*/
+.contenedor-formulario {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 100rem;
+    text-align: center;
+    height: 55rem;
+    margin-top: 20rem;
+}
+  
+
+.titulo-formulario {
+    margin-bottom: 5rem;
+    font-size: 4.4rem;
+    color: var(--colorTitulos);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.fila-formulario {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.campo-formulario,
+.campo-texto {
+    background: transparent;
+    border: none;
+    border-bottom: 0.1rem solid var(--blanco);
+    color: var(--blanco);
+    outline: none;
+    font-size: 2rem;
+    padding: 0.5rem 0;
+    width: 100%;
+}
+
+.campo-texto {
+    resize: none;
+    height: 5rem; 
+    margin-top: 2rem;
+}
+
+
+.boton-enviar {
+    background-color: var(--blanco);
+    color: var(--negro);
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.boton-enviar:hover {
+    background-color: var(--colorTitulos);
 }
 
 
