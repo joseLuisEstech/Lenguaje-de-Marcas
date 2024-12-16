@@ -152,9 +152,6 @@ h3{
     transform: rotate(60deg);
     filter: invert(0);
 }
-.boton a:focus {
-    scroll-behavior: smooth; /* Hace que el desplazamiento sea suave */
-}
 
 
 /* --- SECCION SOBRE MÍ ---*/
