@@ -225,6 +225,7 @@ li{
     position: absolute;
     right: 1.5rem;
     bottom: 2rem;
+    color: var(--morado);
 }
 .card a:hover{
     border-bottom: 1px solid var(--morado);
@@ -314,6 +315,7 @@ li{
     margin-top: 2rem;
     text-align: end;
     transition: color .3s;
+    color: var(--morado);
 }
 .texto-card-opiniones a:hover{
     color: var(--amarillo);
