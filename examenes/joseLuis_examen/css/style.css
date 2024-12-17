@@ -1,0 +1,400 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /*para que 1rem = 10px*/
+}
+
+*, *:before, *:after {
+   box-sizing: inherit;
+   margin: 0;
+}
+
+/*Variables*/
+:root{
+    --fuenteEncabezados: "Space Grotesk", sans-serif;
+    --fuenteParrafos: "Roboto", serif;
+
+    --morado: #751BBC;
+    --amarillo: #FDBE55;
+    --moradoOscuro: #34172E;
+    --negro: #000000;
+    --blanco: #FFFFFF;
+}
+
+/*Globales*/
+body{
+    font-family: var(--fuenteParrafos);
+    font-size: 2rem;
+}
+h1,h2,h3,h4{
+    font-family: var(--fuenteEncabezados);
+    font-weight: 700;
+}
+h1{
+    font-size: 8.4rem;
+}
+h2{
+    font-size: 3.8rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+img{
+    display: block;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.contenedor{
+    max-width: 160rem;
+    margin: 0 auto;
+    width: 90%;
+}
+.text-center{
+    text-align: center;
+}
+
+/* --- HEADER --- */
+.header{
+    background-image: url(../img/header.png);
+    height: 120rem;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+.navegacion{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15rem;
+}
+.logo-nav{
+    transition: transform .3s;
+}
+.logo-nav:hover{
+    transform: scale(1.1);
+}
+.logo-nav a img{
+    width: 30rem;
+    padding: 2rem;
+}
+.enlaces-nav a{
+    margin-right: 5rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: color .3s;
+}
+.enlaces-nav a:hover{
+    color: var(--amarillo);
+}
+
+.enlaces-nav a:nth-child(4){
+    color: var(--negro);
+    transition: color .3s;
+}
+.enlaces-nav a:nth-child(4):hover{
+    color: var(--blanco);
+}
+.registrar{
+    background-color: var(--amarillo);
+    color: var(--negro);
+    padding: 1.5rem 3rem;
+    border-radius: 1.5rem;
+    transition: transform .3s;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.texto-header{
+    background-color: rgb(0, 0, 0, .5);
+    width: 100rem;
+    height: 40rem;
+    margin: 0 auto;
+    border-radius: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.texto-header h3{
+    color: var(--amarillo);
+    text-transform: uppercase;
+    margin-top: 5rem;
+}
+.texto-header h1{
+    color: var(--blanco);
+    font-weight: 900;
+    margin-top: 1rem;
+}
+.texto-header h1 span{
+    color: var(--amarillo);
+}
+.texto-header p{
+    color: var(--blanco);
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+.saber-mas{
+    background-color: var(--morado);
+    color: var(--negro);
+    padding: 1.5rem 3rem;
+    border-radius: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-right: 1rem;
+}
+.botones-header a{
+    transition: color .3s;
+}
+.botones-header a:hover{
+    color: var(--blanco);
+}
+
+/* --- NUESTROS SERVICIOS --- */
+.servicios{
+    margin-top: 15rem;
+}
+.separar{
+    display: flex;
+    align-items: flex-end;
+}
+.encabezado-servicios{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.textos-encabezado-servicios{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2rem;
+}
+.textos-encabezado-servicios h3{
+    color: var(--amarillo);
+    font-size: 2.8rem;
+}
+.textos-encabezado-servicios h2{
+    width: 56rem;
+    font-size: 4.2rem;
+}
+.textos-encabezado-servicios h2 span{
+    color: var(--morado);
+}
+.ver-mas-servicios{
+    display: flex;
+    align-items: center;
+}
+.ver-mas-servicios a{
+    margin-right: 1rem;
+}
+.ver-mas-servicios img{
+    transition: transform .3s;
+}
+.ver-mas-servicios:hover img{
+    font-weight: 900;
+    transform: rotate(90deg);
+}
+
+/*Cards*/
+.cards-servicios{
+    margin-top: 6rem;
+    display: flex;
+}
+.card{
+    border: 1px solid var(--morado);
+    margin-right: 2rem;
+    padding: 2rem;
+    position: relative;
+}
+.card img{
+    margin-bottom: 6rem;
+}
+.card h3{
+    color: var(--morado);
+    margin-bottom: 2rem;
+}
+.card p{
+    font-weight: 100;
+    margin-bottom: 4rem;
+}
+.card p span{
+    font-weight: 400;
+}
+.card a{
+    position: absolute;
+    right: 1.5rem;
+    bottom: 2rem;
+}
+.card a:hover{
+    border-bottom: 1px solid var(--morado);
+}
+.card:last-of-type{
+    margin-right: 0;
+}
+
+
+/* --- NUESTROS TRABAJOS --- */
+.nuestros-trabajos{
+    margin-top: 15rem;
+    background-color: var(--moradoOscuro);
+}
+.textos-trabajos{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10rem 0;
+}
+.textos-trabajos h2{
+    width: 50rem;
+    font-size: 5.4rem;
+    color: var(--blanco);
+}
+.textos-trabajos h2 span{
+    color: var(--amarillo);
+}
+.textos-trabajos a{
+    color: var(--blanco);
+}
+.texto-header img{
+    fill: #FFFFFF;
+}
+
+.img-trabajos{
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 15rem;
+}
+.img-trabajos img{
+    max-width: 33%;
+}
+.ver-mas-servicios a:hover{
+    border-bottom: 1px solid var(--blanco);
+}
+
+
+/* --- OPINIONES --- */
+.opiniones{
+    width: 200rem;
+    margin: 0 auto;
+}
+.opiniones h3{
+    margin-top: 10rem;
+    text-transform: uppercase;
+    color: var(--amarillo);
+    font-weight: 100;
+    margin-bottom: 2rem;
+}
+.opiniones h2{
+    font-size: 5rem;
+    font-weight: 900;
+    margin-bottom: 5rem;
+}
+.opiniones h2 span{
+    color: var(--morado);
+}
+.cards-opiniones{
+    display: flex;
+    gap: 3rem;
+}
+
+.card-opiniones{
+    display: flex;
+    border: 1px solid var(--negro);
+    border-radius: 2rem;
+    padding: 3rem;
+}
+
+.texto-card-opiniones{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.texto-card-opiniones a{
+    margin-top: 2rem;
+    text-align: end;
+    transition: color .3s;
+}
+.texto-card-opiniones a:hover{
+    color: var(--amarillo);
+}
+
+.encabezado-card-opiniones{
+    padding: 2rem 3rem;
+}
+
+.encabezado-card-opiniones p{
+    margin-bottom: 1rem;
+}
+.encabezado-card-opiniones p span{
+    color: var(--morado);
+}
+
+.encabezado-card-opiniones h3{
+    margin-top: 1rem;
+    color: var(--negro);
+    font-weight: 900;
+    font-size: 4.4rem;
+    text-transform: lowercase;
+}
+.encabezado-card-opiniones h3 span{
+    text-transform: uppercase;
+}
+
+.parrafo-card-opiniones{
+    padding: 4rem;
+}
+
+
+/* --- FOOTER --- */
+footer{
+    background-color: var(--moradoOscuro);
+    margin-top: 10rem;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 5rem 2rem;
+    font-weight: 100;
+}
+.footer ul{
+    width: 25%;
+}
+.footer ul li{
+    margin: 1rem;
+}
+.footer li, .footer a{
+    color: var(--blanco);
+}
+.footer ul li a:hover{
+    border-bottom: 1px solid var(--blanco);
+}
+
+.contenedor-footer{
+    width: 200rem;
+    margin: 0 auto;
+}
+.diferente a{
+    border-bottom: 1px solid var(--blanco);
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.logo-footer li a img{
+    width: 30rem;
+}
+.iconos-footer{
+    display: flex;
+    align-items: flex-end;
+}
+.iconos-footer li {
+    transition: transform .3s;
+}
+.iconos-footer li:hover{
+    transform: scale(1.2);
+}
+.tel-footer{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
